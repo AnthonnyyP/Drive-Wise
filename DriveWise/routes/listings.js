@@ -7,7 +7,7 @@ const router = express.Router();
 
 // HTTP Requests
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'DriveWise' });
+  res.send('respond with a resource');
 });
 
 module.exports = router;
