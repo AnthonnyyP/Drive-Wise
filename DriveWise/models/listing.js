@@ -2,7 +2,7 @@ const mongoose = require ('mongoose')
 
 const Schema = mongoose.Schema
 
-const listingSchema = new Schema (
+const Listing = new Schema (
     {
       image: {
         type: String,
@@ -27,4 +27,4 @@ const listingSchema = new Schema (
     }
   )
 
-  module.exports = mongoose.model('Listing', listingSchema)
+  module.exports = mongoose.model("Listing", Listing)

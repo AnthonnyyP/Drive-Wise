@@ -2,11 +2,11 @@
 
 
 // CarCard Function
-const CarCard = () => {
+const CarCard = (cars) => {
   return(
     <div className="carcard-div">
       <div className="carcard-body-div">
-
+        <h2></h2>
       </div>
     </div>
   )

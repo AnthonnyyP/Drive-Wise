@@ -1,13 +1,11 @@
-// Required Imports
 const express = require('express');
 const router = express.Router();
 
-// Controller
 
-
-// HTTP Requests
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'DriveWise' });
 });
+router.get('/listings')
+router.get('/listings/:id')
 
 module.exports = router;

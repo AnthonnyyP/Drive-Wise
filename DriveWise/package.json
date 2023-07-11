@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node --watch ./bin/www"
+    "dev": "node --watch server.js"
   },
   "author": "Anthony Phan",
   "dependencies": {

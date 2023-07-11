@@ -6,6 +6,7 @@ const router = express.Router();
 const reviewsCtrl = require('../controllers/reviews')
 
 // HTTP Requests
-router.post('/car/:id/reviews', reviewsCtrl.createReview)
+router.post('/listings/:id/reviews', reviewsCtrl.createReview)
+router.delete('/listings/:id/reviews', reviewsCtrl.delete)
 
-router.delete('/cars/:id/reviews', reviewsCtrl.delete)
+module.exports = router; 

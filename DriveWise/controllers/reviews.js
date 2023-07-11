@@ -1,4 +1,4 @@
-const Car = require('../models/car');
+const Review = require('../models/Review');
 
 const createReview = async (req, res) => {
   let { review, rating, datePosted } = req.body;
@@ -8,10 +8,11 @@ const createReview = async (req, res) => {
     rating: rating,
     user: req.user._id,
   };
-  const car = await Car.findById(req.params.id);
-  car.reviews.push(newReview);
+  
+  const carReview = await Review.findById(req.params.id);
+  carReview.review.push(newReview);
   try {
-    await car.save();
+    await carReview.save();
   } catch (err) {
     console.log(err);
   }
@@ -35,6 +36,6 @@ const deleteReview = (req, res, next) => {
 }
 
 module.exports = {
-  create: createReview,
+  createReview,
   delete: deleteReview,
 }
