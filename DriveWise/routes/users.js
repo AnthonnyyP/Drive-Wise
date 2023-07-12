@@ -6,6 +6,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'DriveWise' });
 });
 router.get('/listings')
-router.get('/listings/:id')
+router.get('/:id')
 
 module.exports = router;

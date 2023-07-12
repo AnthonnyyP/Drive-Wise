@@ -23,7 +23,9 @@ const Listing = new Schema (
       price:{
         type: String,
         required: true
-      },
+      }, 
+      reviews: [{ type: Schema.Types.ObjectId, ref: 'Review'}],
+      maintenance: [{ type: Schema.Types.ObjectId, ref: 'Maintenance'}]
     }
   )
 

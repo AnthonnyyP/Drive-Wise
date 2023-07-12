@@ -7,9 +7,6 @@ const reviewSchema = new Schema(
       type: String, 
       required: true, 
     },
-    datePosted: {
-      type: Date
-    },
     rating: {
       type: Number, 
       min: 1,
@@ -18,14 +15,11 @@ const reviewSchema = new Schema(
     },
     user: {
       type: Schema.Types.ObjectId,
-      ref: 'User',
+      ref: 'user',
       required: true, 
     },
-    userName: String,
-    userAvatar: String,
-  },
-  {
-    timestamps: true
+  }, {
+    timestamp: true
   }
 )
 

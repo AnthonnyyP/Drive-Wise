@@ -6,8 +6,11 @@ const logger = require('morgan');
 const app = express();
 const cors = require('cors')
 
+const authRouter = require('./routes/auth');
+const userRouter = require('./routes/users')
 const listingsRouter = require('./routes/listings');
 const reviewsRouter = require('./routes/reviews');
+const maintenanceRouter = require('./routes/maintenance');
 
 const PORT = process.env.PORT || 3001
 const db = require('./db')
@@ -23,8 +26,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/listings', listingsRouter);
+app.use('/auth', authRouter);
+app.use('/', userRouter);
+app.use('/', listingsRouter);
 app.use('/', reviewsRouter);
+app.use('/', maintenanceRouter);
 
 app.use('/', (req, res) => {
   res.send(`Connected!`)

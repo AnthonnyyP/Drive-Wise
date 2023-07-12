@@ -6,33 +6,23 @@ const SALT_ROUNDS = parseInt(process.env.SALT_ROUNDS)
 const APP_SECRET = process.env.APP_SECRET
 
 const hashPassword = async (password) => {
-  // Accepts a password from the request body
   let hashedPassword = await bcrypt.hash(password, SALT_ROUNDS)
-  // Creates a hashed password and encrypts it 12 times
   return hashedPassword
 }
 
 const comparePassword = async (storedPassword, password) => {
-  // Accepts the password provided in the login request and the currently stored password
-  // Compares the two passwords for a match
   let passwordMatch = await bcrypt.compare(password, storedPassword)
-  // Returns true if the passwords match
-  // Returns false if the passwords are not a match
   return passwordMatch
 }
 
 const createToken = (payload) => {
-  // Accepts a payload with which to create the token
   let token = jwt.sign(payload, APP_SECRET)
-  // Generates the token and encrypts it, returns the token when the process finishes
   return token
 }
 
 const stripToken = (req, res, next) => {
   try {
     const token = req.headers['authorization'].split(' ')[1]
-    // Gets the token from the request headers {authorization: Bearer Some-Token}
-    // Splits the value of the authorization header
     if (token) {
       res.locals.token = token
       // If the token exists we add it to the request lifecycle state
