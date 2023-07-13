@@ -13,7 +13,7 @@ const GetAllMaintenanceLog = async (req, res) => {
 const GetSingularMaintenanceLog = async (req, res) => {
   try {
     const listingMaintenanceLog = await Listing.findById(req.params.id)
-    return res.status(201).json(maintenanceLog)
+    return res.status(201).json(listingMaintenanceLog)
   } catch (err) {
     return res.status(500).json(err)
   }

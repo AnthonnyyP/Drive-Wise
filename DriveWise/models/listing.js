@@ -16,16 +16,16 @@ const Listing = new Schema (
         type: String,
         required: true
       },
-      category:{
+      catgory: {
         type: String,
-        required: true
-      },
+        r
+      }
       price:{
         type: String,
         required: true
       }, 
       reviews: [{ type: Schema.Types.ObjectId, ref: 'Review'}],
-      maintenance: [{ type: Schema.Types.ObjectId, ref: 'Maintenance'}]
+      maintenance: [{ type: Schema.Types.ObjectId, ref: 'Maintenance'}],
     }
   )
 
