@@ -10,6 +10,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
+import CarDetails from './pages/CarDetails'
 
 // App Function
 const App = () => {
@@ -41,6 +42,7 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/home" element={<Home/>}/>
+          <Route path="/home/listings/:id" element={<CarDetails/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/signup" element={<SignUp/>}/>

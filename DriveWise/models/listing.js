@@ -16,10 +16,14 @@ const Listing = new Schema (
         type: String,
         required: true
       },
-      catgory: {
+      description: {
         type: String,
-        r
-      }
+        required: true
+      },
+      category: {
+        type: String,
+        required: true,
+      },
       price:{
         type: String,
         required: true

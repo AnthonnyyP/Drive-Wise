@@ -7,7 +7,7 @@ const listingCtrl = require('../controllers/listings')
 
 // HTTP Requests
 router.get('/listings', listingCtrl.GetAllListings)
-router.get('/listing/:id', listingCtrl.GetOneListing)
+router.get('/listings/:id', listingCtrl.GetOneListing)
 router.post('/listings', listingCtrl.CreateListing)
 
 module.exports = router;

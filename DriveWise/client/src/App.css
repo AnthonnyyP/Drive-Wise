@@ -2,6 +2,9 @@ body {
   margin: 0;
 }
 
+h3 {
+  color: black;
+}
 header {
   display: flex;
   flex-direction: row;
@@ -87,4 +90,25 @@ footer p {
 }
 .icon-div-body{
   margin: 3px;
+}
+
+.carcard-body-div {
+  color: black;
+}
+
+.car-card-img {
+  width: 30%
+}
+
+.banner {
+  background-image: url(https://i.imgur.com/jexUfSy.png);
+  background-size: cover;
+  background-position: center center;
+  opacity: .95;
+  top: 100px;
+  height: 40vh;
+}
+
+.contact-icon {
+  width: 10%;
 }

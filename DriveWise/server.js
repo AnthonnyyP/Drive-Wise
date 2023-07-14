@@ -12,7 +12,7 @@ const listingsRouter = require('./routes/listings');
 const reviewsRouter = require('./routes/reviews');
 const maintenanceRouter = require('./routes/maintenance');
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 5174
 const db = require('./db')
 
 // view engine setup
