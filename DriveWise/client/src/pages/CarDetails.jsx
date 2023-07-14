@@ -1,6 +1,6 @@
 // Imports
 import { GetListing } from "../services/DetailService"
-import { useState, useEffect} from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom"
 
 // CarDetails Function
