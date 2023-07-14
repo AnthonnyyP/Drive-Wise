@@ -11,7 +11,7 @@ const Search = (props) => {
       onChange={props.onChange}
       ></input>
       <button type='submit'><span className="material-symbols-outlined">
-      search
+      Search
       </span>
       </button>
     </form>

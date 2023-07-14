@@ -8,11 +8,10 @@ const CarDetails = () => {
   const [details, setDetails] = useState([])
 
   let { listingId } = useParams()
-
+  console.log(listingId)
   useEffect(() => {
     const handleListing = async () => {
-      const data = await GetListing()
-      console.log(data)
+      const data = await GetListing(listingId)
       setDetails(data)
     }
     handleListing()
@@ -21,6 +20,14 @@ const CarDetails = () => {
   return(
     <div className="cardetails-div">
       <div className="cardetails-body-div">
+        <img src={details.image}/>
+        <h1>{details.title}</h1>
+        <h2>{details.category}</h2>
+        <h3>{details.price}</h3>
+        <p>{details.detail}</p>
+        <p>{details.description}</p>
+      </div>
+      <div className="reviews-section">
 
       </div>
     </div>
