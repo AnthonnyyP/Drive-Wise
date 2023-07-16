@@ -37,50 +37,58 @@ const SignUp = () => {
   return (
     <div className="signin col">
       <div className="card-overlay centered">
-        <form className="col" onSubmit={handleSubmit}>
+        <form className="sign-up" onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <label htmlFor="name">Name</label>
+            <h1 className='signup-header'>Sign-Up</h1>
             <input
+              className='signup-field'
               onChange={handleChange}
               name="name"
               type="text"
-              placeholder="John Smith"
+              placeholder="Name"
               value={formValues.name}
               required
+              size="50"
             />
           </div>
           <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
             <input
+              className='signup-field'
               onChange={handleChange}
               name="email"
               type="email"
-              placeholder="example@example.com"
+              placeholder="Email"
               value={formValues.email}
               required
+              size="50"
             />
           </div>
 
           <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
             <input
+              className='signup-field'
               onChange={handleChange}
               type="password"
               name="password"
+              placeholder="Password"
               value={formValues.password}
               required
+              size="50"
             />
           </div>
           <div className="input-wrapper">
-            <label htmlFor="confirmPassword">Confirm Password</label>
             <input
+              className='signup-field'
               onChange={handleChange}
               type="password"
               name="confirmPassword"
+              placeholder="Confirm Password"
               value={formValues.confirmPassword}
               required
+              size="50"
             />
           </div>
+          <br/>
           <button
             disabled={
               !formValues.email ||
@@ -88,7 +96,7 @@ const SignUp = () => {
                 formValues.confirmPassword === formValues.password)
             }
           >
-            Sign In
+            Sign Up
           </button>
         </form>
       </div>

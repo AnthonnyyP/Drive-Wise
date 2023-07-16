@@ -22,28 +22,31 @@ const SignIn = ({ setUser }) => {
   return (
     <div className="signin col">
       <div className="card-overlay centered">
-        <form className="col" onSubmit={handleSubmit}>
+        <form className="signin-form" onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
+            <h1 className='signin-header'>Sign-In</h1>
             <input
+              className='signin-field'
               onChange={handleChange}
               name="email"
               type="email"
-              placeholder="example@example.com"
+              placeholder="Name"
               value={formValues.email}
               required
             />
           </div>
           <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
             <input
+              className='signin-field'
               onChange={handleChange}
               type="password"
               name="password"
+              placeholder="Password"
               value={formValues.password}
               required
             />
           </div>
+          <br/>
           <button disabled={!formValues.email || !formValues.password}>
             Sign In
           </button>

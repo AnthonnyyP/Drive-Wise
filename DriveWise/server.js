@@ -12,7 +12,7 @@ const listingsRouter = require('./routes/listings');
 const reviewsRouter = require('./routes/reviews');
 const maintenanceRouter = require('./routes/maintenance');
 
-const PORT = process.env.PORT || 5174
+const PORT = process.env.PORT || 3001
 const db = require('./db')
 
 // view engine setup
@@ -27,10 +27,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/auth', authRouter);
-app.use('/', userRouter);
-app.use('/', listingsRouter);
-app.use('/', reviewsRouter);
-app.use('/', maintenanceRouter);
+app.use('/user', userRouter);
+app.use('/listings', listingsRouter);
+app.use('/reviews', reviewsRouter);
+app.use('/maintenance', maintenanceRouter);
 
 app.use('/', (req, res) => {
   res.send(`Connected!`)

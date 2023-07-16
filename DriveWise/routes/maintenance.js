@@ -6,8 +6,8 @@ const router = express.Router();
 const maintenanceCtrl = require('../controllers/maintenance')
 
 // HTTP Requests
-router.get('/maintenance', maintenanceCtrl.GetAllMaintenanceLog)
-router.get('/maintenance/listings/:id', maintenanceCtrl.GetSingularMaintenanceLog)
-router.post('/maintenance/listings/:id', maintenanceCtrl.CreateMaintenanceLog)
+router.get('/', maintenanceCtrl.GetAllMaintenanceLog)
+router.get('/listings/:id', maintenanceCtrl.GetSingularMaintenanceLog)
+router.post('/listings/:id', maintenanceCtrl.CreateMaintenanceLog)
 
 module.exports = router;

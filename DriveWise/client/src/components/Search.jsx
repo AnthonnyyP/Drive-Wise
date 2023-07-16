@@ -9,6 +9,7 @@ const Search = (props) => {
       value={props.value}
       placeholder="Search"
       onChange={props.onChange}
+      size="50"
       ></input>
       <button type='submit'><span className="material-symbols-outlined">
       Search

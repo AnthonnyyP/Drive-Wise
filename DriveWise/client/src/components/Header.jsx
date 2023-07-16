@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const Header = () => {
   return(
     <header>
-      <h1 className="header-title">DriveWise</h1>
+      <h1 className="header-title"><a href="/home">DriveWise</a></h1>
       <nav>
         <div className="nav-bar">
           <Link to={'/home'}>Home</Link>

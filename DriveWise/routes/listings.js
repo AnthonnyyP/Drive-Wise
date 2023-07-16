@@ -6,8 +6,8 @@ const router = express.Router();
 const listingCtrl = require('../controllers/listings')
 
 // HTTP Requests
-router.get('/listings', listingCtrl.GetAllListings)
-router.get('/listings/:id', listingCtrl.GetOneListing)
-router.post('/listings', listingCtrl.CreateListing)
+router.get('/', listingCtrl.GetAllListings)
+router.get('/:id', listingCtrl.GetOneListing)
+router.post('/', listingCtrl.CreateListing)
 
 module.exports = router;

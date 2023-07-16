@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
 }
 
@@ -124,6 +124,296 @@ footer p {
   width: 100%;
   height: 100%;
 }
-.car-card-body{
+
+.cardetails-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+.cardetails-body-div{
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 0.5fr; 
+  gap: 0px 20px; 
+  grid-template-areas: 
+    ". .";
+  border: 3px solid black;
+  border-radius: 5px;
+  width: 80%;
+}
+.details-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-review {
+  border: 3px solid black;
+  width: 80%;
+}
+ */
+
+
+ body {
+  margin: 0;
+}
+
+h3 {
+  color: black;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  height: 3em;
+  max-height: 3em;
+}
+
+.header-title {
+  color: white;
+  margin-left: 20px;
+}
+
+nav {
+  display: flex;
+  margin-left: auto;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  width: 80%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  height: 20px;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+.contact-body-div {
+  background-color: #C3B1E1;
+  color: white;
+}
+
+.about-intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.intro-p2 {
+  margin-top: -2px;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 8px 0px;
+}
+
+.icon-div {
+  text-align: center;
+  width: 15em;
+}
+
+.icon-div img {
+  width: 80px;
+  height: auto;
+}
+
+.icon-div-header {
+  margin: 3px;
+}
+
+.icon-div-body {
+  margin: 3px;
+}
+
+.carcard-body-div {
+  color: black;
+}
+
+.banner {
+  background-image: url(https://i.imgur.com/jexUfSy.png);
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.95;
+  top: 100px;
+  height: 40vh;
+}
+
+.contact-icon {
+  width: 10%;
+}
+
+.carcard-body-div {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-rows: 0.5fr;
+  gap: 0px 20px;
+  grid-template-areas: ". .";
+  border: 3px solid black;
+  border-radius: 5px;
+  width: 80%;
+  margin-left: auto;
+}
+
+.car-card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cardetails-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.cardetails-body-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr;
+  gap: 0px 20px;
+  grid-template-areas: ". .";
+  border: 3px solid black;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.details-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-review {
+  border: 3px solid black;
+  width: 80%;
+}
+
+#add-review-form {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+}
+
+#add-review-form input[type="submit"] {
+  width: 8rem;
+  grid-column: 2 / 3;
+  margin-bottom: 2rem;
+}
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 3px solid #000000;
+  border-radius: 3%;
+  width: 50%;
+  margin: 7% auto;
+  padding: 2%;
+}
+
+.signup-header{
+  text-align: center;
+}
+
+.signup-field{
+  padding: 1em;
+  margin: 3%;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 3px solid #000000;
+  border-radius: 3%;
+  width: 50%;
+  margin: 7% auto;
+  padding: 2%;
+}
+
+.signin-header{
+  text-align: center;
+}
+
+.signin-field{
+  padding: 1em;
+  margin: 3%;
+}
+
+.search-button{
+  padding: 1em;
+  margin: 3%;
+}
+@media (max-width: 768px) {
+  .about-intro,
+  .carcard-body-div,
+  .cardetails-body-div,
+  .user-review {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-container {
+    flex-direction: column;
+  }
   
+  .icon-div {
+    width: 100%;
+  }
 }
