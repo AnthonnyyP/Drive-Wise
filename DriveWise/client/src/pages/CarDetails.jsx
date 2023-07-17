@@ -4,13 +4,14 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Reviews from '../components/Reviews'
 import ReviewForm from '../components/ReviewForm'
+import Maintenance from '../components/MaintenanceLog'
 
 // CarDetails Function
 const CarDetails = () => {
-  const [details, setDetails] = useState([])
+  const [details, setDetails] = useState({})
 
   let { listingId } = useParams()
-  console.log(listingId)
+
   useEffect(() => {
     const handleListing = async () => {
       const data = await GetListing(listingId)
@@ -36,11 +37,22 @@ const CarDetails = () => {
           </div>
         </div>
       </div>
-      <div className="reviews-section">
-        <h1>Leave a Review</h1>
-        <ReviewForm/>
-        <h1>Reviews</h1>
-        <Reviews/>
+      <div>
+        {details.maintenance?.map((log) => (
+          <Maintenance 
+            log={log}
+          />
+        ))}
+      </div>
+      <div>
+        <div>
+          <h1>Leave a Review</h1>
+            <ReviewForm />
+        </div>
+        <div className="reviews-section">
+          <h1>Reviews</h1>
+            <Reviews />
+        </div>
       </div>
     </div>
   )

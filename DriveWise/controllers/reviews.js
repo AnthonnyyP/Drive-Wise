@@ -1,12 +1,12 @@
 const Review = require('../models/Review')
-const Listing = require('../models/Listing')
+const Listing = require('../models/Listing');
+
 
 const createReview = async (req, res) => {
   let { review, rating } = req.body;
   const newReview = {
     review: review,
     rating: rating,
-    user: req.params.userid
   } 
   try {
     const userReview = await Review.create(newReview);
@@ -36,22 +36,16 @@ const updateReview = async (req, res) => {
   }
 };
 
-const deleteReview = (req, res, next) => {
-  Car.findOne({
-    'reviews._id': req.params.id,
-    'reviews.user': req.user._id
-  }).then((car) => {
-    if (!car) return res.redirect('/listings')
-    car.reviews.remove(req.params.id)
-    car
-      .save()
-      .then(() => {
-        res.redirect(`/car/${car._id}`)
-      })
-      .catch((error) => {
-        return next(error)
-      })
+const deleteReview = async (req, res) => {
+  await Review.findByIdAndDelete(req.params.reviewid)
+  let listing = await Listing.findById(req.params.listingid)
+  let review = listing.reviews.find((review) => {
+    return review._id.toString() === req.params.reviewid
   })
+  let index = listing.reviews.indexOf(review)
+  listing.reviews.splice(index, 1)
+  listing.save()
+  return res.send(`Review with ${req.params.listingid} deleted.`)
 }
 
 module.exports = {

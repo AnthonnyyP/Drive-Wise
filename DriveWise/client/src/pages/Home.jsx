@@ -1,13 +1,12 @@
 // Imports
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Search from '../components/Search'
-import CarCard from '../components/CarCard'
-import TypeCard from '../components/TypeCard'
 import { GetListings } from '../services/ListingService'
+import CarCard from '../components/CarCard'
+
 
 // Home Function
-const Home = ( {user} ) => {
+const Home = () => {
   const [listings, setListing] = useState([])
 
   useEffect(() => {
@@ -21,7 +20,6 @@ const Home = ( {user} ) => {
   return(
     <div className="home-div">
       <h1>Remember to DriveWise</h1>
-      <Search/>
       <div className="all-listings-div">
       {listings.map((listing) => (
         <Link

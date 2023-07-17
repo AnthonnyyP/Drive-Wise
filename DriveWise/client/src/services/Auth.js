@@ -1,4 +1,4 @@
-import Client from './API'
+import Client from './api'
 
 export const SignInUser = async (data) => {
   try {

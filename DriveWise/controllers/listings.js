@@ -13,6 +13,7 @@ const GetAllListings = async (req, res) => {
 const GetOneListing = async (req, res) => {
   try {
     const carDetail = await Listing.findById(req.params.id).populate("maintenance")
+    console.log(carDetail)
     return res.status(201).json(carDetail)
   } catch (err) {
     return res.status(500).json(err)

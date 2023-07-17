@@ -279,7 +279,13 @@ footer p {
 .contact-icon {
   width: 10%;
 }
-
+.all-listings-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 .carcard-body-div {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -289,7 +295,7 @@ footer p {
   border: 3px solid black;
   border-radius: 5px;
   width: 80%;
-  margin-left: auto;
+  justify-content: center;
 }
 
 .car-card-img {
@@ -314,9 +320,10 @@ footer p {
   grid-template-rows: 0.5fr;
   gap: 0px 20px;
   grid-template-areas: ". .";
-  border: 3px solid black;
-  border-radius: 5px;
-  width: 80%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  margin: 0px 20px;
 }
 
 .details-img {
@@ -327,7 +334,7 @@ footer p {
   height: 100%;
 }
 
-.reviews-div {
+.review-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -339,16 +346,35 @@ footer p {
   width: 80%;
 }
 
+.reviews-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #add-review-form {
   display: grid;
   grid-template-columns: auto auto;
   gap: 1rem;
+  margin: 3%;
 }
 
 #add-review-form input[type="submit"] {
-  width: 8rem;
+  width: 6rem;
   grid-column: 2 / 3;
   margin-bottom: 2rem;
+}
+
+.review-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-button{
+  text-align: center;
+  width: 20%;
 }
 
 .sign-up {
