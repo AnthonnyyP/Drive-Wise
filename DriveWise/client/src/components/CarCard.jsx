@@ -13,7 +13,7 @@ const CarCard = (props) => {
           <h4>{props.listing.category}</h4>
           <p>{props.listing.price}</p>
           <p>{props.listing.detail}</p>
-          <p>{props.listing.description}</p>
+          <p>{props.listing.shortdescription}</p>
         </div>
       </div>
   )

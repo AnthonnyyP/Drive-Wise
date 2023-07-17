@@ -16,7 +16,11 @@ const Listing = new Schema (
         type: String,
         required: true
       },
-      description: {
+      shortdescription:{
+        type: String,
+        required: true
+      },
+      longdescription: {
         type: String,
         required: true
       },

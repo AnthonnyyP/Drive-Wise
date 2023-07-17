@@ -33,7 +33,7 @@ const CarDetails = () => {
             <h2>{details.category}</h2>
             <h3>{details.price}</h3>
             <p>{details.detail}</p>
-            <p>{details.description}</p>
+            <p>{details.longdescription}</p>
           </div>
         </div>
       </div>
