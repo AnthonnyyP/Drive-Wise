@@ -291,13 +291,14 @@ footer p {
   gap: 0px 20px;
   grid-template-areas: ". .";
 }
-
 .maintenance-body li {
   justify-content: center;
   align-items: center;
   margin: 20px 50px;
 }
-
+.maintenance-ul {
+  border-right: 1px solid #000000;
+}
 .maintenance-header {
   text-align: center;
 }

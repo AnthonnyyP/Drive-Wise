@@ -12,7 +12,7 @@ const GetAllListings = async (req, res) => {
 
 const GetOneListing = async (req, res) => {
   try {
-    const carDetail = await Listing.findById(req.params.id).populate("maintenance")
+    const carDetail = await Listing.findById(req.params.id).populate("maintenance").populate("reviews")
     console.log(carDetail)
     return res.status(201).json(carDetail)
   } catch (err) {

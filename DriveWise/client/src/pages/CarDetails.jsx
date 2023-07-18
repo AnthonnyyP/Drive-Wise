@@ -50,7 +50,11 @@ const CarDetails = () => {
         </div>
         <div className="reviews-section">
           <h1>Reviews</h1>
-            <Reviews />
+          {details.reviews?.map((review) => (
+            <Reviews 
+            review={review}
+            />
+          ))}
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { MakeReview } from '../services/ReviewsServices'
 
 const ReviewForm = () => {
@@ -8,13 +9,15 @@ const ReviewForm = () => {
   }
   const [formState, setFormState] = useState(initialState)
 
+  const { listingId } = useParams()
+
   const handleChange = (e) => {
     setFormState({...formState, [e.target.id]: e.target.value})
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await MakeReview('http://localhost:3001/listings/:id/reviews', formState)
+    await MakeReview(listingId, {rating: parseInt(formState.rating), review: formState.review})
     setFormState(initialState)
   }
 
@@ -25,7 +28,7 @@ const ReviewForm = () => {
         <label htmlFor="rating">Rating:</label>
             <select 
             id="rating" 
-            name="select" 
+            name="rating" 
             onChange={handleChange} 
             value={formState.rating}
             >
@@ -38,6 +41,7 @@ const ReviewForm = () => {
         <label htmlFor="review">Review:</label>
           <textarea 
           id="review" 
+          name="review"
           rows="2" 
           cols="50" 
           value={formState.review}
@@ -51,3 +55,4 @@ const ReviewForm = () => {
 }
 
 export default ReviewForm
+

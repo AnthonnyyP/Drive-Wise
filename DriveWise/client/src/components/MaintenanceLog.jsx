@@ -8,7 +8,7 @@ const Maintenance = (props) => {
     <div className="maintenance-div">
       <h1 className='maintenance-header'>Maintenance Log</h1>
       <div className='maintenance-body'>
-        <ul>
+        <ul className='maintenance-ul'>
           <li>Mileage: {props.log.mileage}</li>
           <li>Oil Change: {props.log.oilchange}</li>
           <li>Tire Rotation: {props.log.tirerotation}</li>

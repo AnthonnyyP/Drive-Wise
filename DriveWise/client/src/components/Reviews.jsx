@@ -1,17 +1,12 @@
-const Reviews = () => {
+const Reviews = (props) => {
   return(
     <div className="review-div">
-      <div className="user-review">
-        <div className="username">
-          <h3></h3>
-        </div>
         <div className="rating">
-          <p></p>
+          <p>{props.review.rating}</p>
         </div>
         <div className="review">
-          <p></p>
+          <p>{props.review.review}</p>
         </div>
-      </div>
     </div>
   )
 }
