@@ -1,6 +1,13 @@
 body {
   margin: 0;
 }
+h1{
+  font-family: 'Oswald', sans-serif;
+}
+
+p {
+  font-family: 'Lora', serif;
+}
 
 h3 {
   color: black;
@@ -12,11 +19,17 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: black;
+  border: 3px dotted black;
+  border-style: groove;
+  font-family: 'Raleway', sans-serif;
   height: 3em;
   max-height: 3em;
+  padding: 5px;
 }
 
 .header-title {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 4px;
   color: white;
   margin-left: 20px;
 }
@@ -52,6 +65,7 @@ footer p {
 }
 
 .tagline-header {
+  margin-top: 0.5em;
   text-align: center;
 }
 
@@ -69,9 +83,11 @@ footer p {
   width: 95%;
   margin: 0 auto;
   max-width: 1200px;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
-
+.intro-p1{
+  margin-top: -10px;
+}
 .intro-p2 {
   margin-top: -2px;
 }
@@ -81,7 +97,7 @@ footer p {
   flex-direction: row;
   justify-content: space-evenly;
   text-align: center;
-  margin: 13px 0px;
+  margin: 8px 0px;
 }
 
 .icon-div {
@@ -99,7 +115,7 @@ footer p {
 }
 
 .icon-div-body {
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 3px;
 }
 
@@ -129,11 +145,12 @@ footer p {
 
 .carcard-body-div {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 1fr 1.1fr;
   grid-template-rows: 0.5fr;
   gap: 0px 20px;
   grid-template-areas: ". .";
-  border: 3px solid black;
+  border: 2px solid dimgray;
+  border-style: outset;
   border-radius: 5px;
   width: 100%;
   justify-content: center;
@@ -143,7 +160,7 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
@@ -171,7 +188,7 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
@@ -266,6 +283,8 @@ footer p {
   padding: 1em;
   margin: 3%;
 }
+
+
 @media (max-width: 768px) {
   .about-intro,
   .carcard-body-div,

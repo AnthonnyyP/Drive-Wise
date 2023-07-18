@@ -20,6 +20,7 @@ const ReviewForm = () => {
 
   return(
     <div className="review-form">
+      <h1>Leave a Review</h1>
       <form id="add-review-form" onSubmit={handleSubmit}>
         <label htmlFor="rating">Rating:</label>
             <select 

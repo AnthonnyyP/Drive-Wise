@@ -31,7 +31,7 @@ const CarDetails = () => {
           <div className="details-body">
             <h1>{details.title}</h1>
             <h2>{details.category}</h2>
-            <h3>{details.price}</h3>
+            <h3>${details.price}.00/day</h3>
             <p>{details.detail}</p>
             <p>{details.longdescription}</p>
           </div>
@@ -46,7 +46,6 @@ const CarDetails = () => {
       </div>
       <div>
         <div>
-          <h1>Leave a Review</h1>
             <ReviewForm />
         </div>
         <div className="reviews-section">

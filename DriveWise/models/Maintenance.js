@@ -8,9 +8,21 @@ const Maintenance = new Schema (
       type: Number,
       required: true
     },
-    description: {
+    oilchange: {
       type: String,
       required: true
+    },
+    tirerotation:{
+      type: String,
+      required: true
+    },
+    brakes: {
+      type: String,
+      required: true
+    },
+    alignment: {
+      type: String, 
+      required: true,
     }
   },{
     timestamps: true
