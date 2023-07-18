@@ -34,5 +34,5 @@ const CreateMaintenanceLog = async (req, res) => {
 module.exports = {
   GetAllMaintenanceLog,
   GetSingularMaintenanceLog,
-  CreateMaintenanceLog,
+  CreateMaintenanceLog
 }

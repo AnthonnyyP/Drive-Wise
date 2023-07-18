@@ -4,7 +4,6 @@ const Listing = require('../models/Listing');
 
 const createReview = async (req, res) => {
   let { review, rating } = req.body;
-  console.log(req.params.id)
   const newReview = {
     review: review,
     rating: rating,
