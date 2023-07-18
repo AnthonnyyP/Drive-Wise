@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const Maintenance = new Schema (
+const Maintenance = new Schema(
   {
     mileage: {
       type: Number,
@@ -12,7 +12,7 @@ const Maintenance = new Schema (
       type: String,
       required: true
     },
-    tirerotation:{
+    tirerotation: {
       type: String,
       required: true
     },
@@ -21,12 +21,17 @@ const Maintenance = new Schema (
       required: true
     },
     alignment: {
-      type: String, 
-      required: true,
+      type: String,
+      required: true
+    },
+    battery: {
+      type: String,
+      required: true
     }
-  },{
+  },
+  {
     timestamps: true
   }
 )
 
-  module.exports = mongoose.model("Maintenance", Maintenance)
+module.exports = mongoose.model('Maintenance', Maintenance)
