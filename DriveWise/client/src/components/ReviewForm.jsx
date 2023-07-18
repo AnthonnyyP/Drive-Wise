@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { MakeReview } from '../services/ReviewsServices'
 // Review Form Function
-const ReviewForm = () => {
+const ReviewForm = (props) => {
   const initialState = {
     rating: '1',
     review: ''
@@ -22,6 +22,7 @@ const ReviewForm = () => {
       rating: parseInt(formState.rating),
       review: formState.review
     })
+    props.handleListing()
     setFormState(initialState)
   }
 

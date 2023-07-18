@@ -12,11 +12,12 @@ const CarDetails = () => {
 
   let { listingId } = useParams()
 
+  const handleListing = async () => {
+    const data = await GetListing(listingId)
+    setDetails(data)
+  }
+
   useEffect(() => {
-    const handleListing = async () => {
-      const data = await GetListing(listingId)
-      setDetails(data)
-    }
     handleListing()
   }, [listingId])
 
@@ -44,7 +45,7 @@ const CarDetails = () => {
       </div>
       <div>
         <div>
-          <ReviewForm />
+          <ReviewForm handleListing={handleListing} />
         </div>
         <div className="reviews-section">
           <h1>Reviews</h1>
