@@ -18,38 +18,35 @@ const App = () => {
 
   useEffect(() => {
     const token = localStorage.getItem('token')
-    // Check if token exists before requesting to validate the token
     if (token) {
       checkToken()
     }
   }, [])
 
   const handleLogOut = () => {
-    //Reset all auth related state and clear localStorage
     setUser(null)
     localStorage.clear()
   }
 
   const checkToken = async () => {
-    //If a token exists, sends token to localStorage to persist logged in user
     const user = await CheckSession()
     setUser(user)
   }
 
   return (
-    <div className='App'>
-      <Header/>
+    <div className="App">
+      <Header />
       <main>
         <Routes>
-          <Route path="/home" element={<Home/>}/>
-          <Route path="/home/listings/:listingId" element={<CarDetails/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/signup" element={<SignUp/>}/>
-          <Route path="/signin" element={<SignIn setUser={setUser}/>}/>
+          <Route path="/home" element={<Home />} />
+          <Route path="/home/listings/:listingId" element={<CarDetails />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn setUser={setUser} />} />
         </Routes>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

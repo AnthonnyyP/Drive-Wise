@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { GetListings } from '../services/ListingService'
 import CarCard from '../components/CarCard'
 
-
 // Home Function
 const Home = () => {
   const [listings, setListing] = useState([])
@@ -17,20 +16,15 @@ const Home = () => {
     handleListing()
   }, [])
 
-  return(
+  return (
     <div className="home-div">
-      <h1 className='tagline-header'>REMEMBER TO DRIVE WISE!</h1>
+      <h1 className="tagline-header">REMEMBER TO DRIVE WISE!</h1>
       <div className="all-listings-div">
-      {listings.map((listing) => (
-        <Link
-          to={`listings/${listing._id}`}
-          key={listing.id}
-        >
-          <CarCard 
-            listing={listing}
-          />
-        </Link>
-          ))}
+        {listings.map((listing) => (
+          <Link to={`listings/${listing._id}`} key={listing.id}>
+            <CarCard listing={listing} />
+          </Link>
+        ))}
       </div>
     </div>
   )

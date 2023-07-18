@@ -39,9 +39,9 @@ const SignUp = () => {
       <div className="card-overlay centered">
         <form className="sign-up" onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <h1 className='signup-header'>Sign-Up</h1>
+            <h1 className="signup-header">Sign-Up</h1>
             <input
-              className='signup-field'
+              className="signup-field"
               onChange={handleChange}
               name="name"
               type="text"
@@ -53,7 +53,7 @@ const SignUp = () => {
           </div>
           <div className="input-wrapper">
             <input
-              className='signup-field'
+              className="signup-field"
               onChange={handleChange}
               name="email"
               type="email"
@@ -66,7 +66,7 @@ const SignUp = () => {
 
           <div className="input-wrapper">
             <input
-              className='signup-field'
+              className="signup-field"
               onChange={handleChange}
               type="password"
               name="password"
@@ -78,7 +78,7 @@ const SignUp = () => {
           </div>
           <div className="input-wrapper">
             <input
-              className='signup-field'
+              className="signup-field"
               onChange={handleChange}
               type="password"
               name="confirmPassword"
@@ -88,7 +88,7 @@ const SignUp = () => {
               size="50"
             />
           </div>
-          <br/>
+          <br />
           <button
             disabled={
               !formValues.email ||

@@ -1,10 +1,12 @@
+// Imports
 import { useState } from 'react'
 import { SignInUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 
+// Sign-In Functionality
 const SignIn = ({ setUser }) => {
   let navigate = useNavigate()
-  
+
   const [formValues, setFormValues] = useState({ email: '', password: '' })
 
   const handleChange = (e) => {
@@ -24,9 +26,9 @@ const SignIn = ({ setUser }) => {
       <div className="card-overlay centered">
         <form className="signin-form" onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <h1 className='signin-header'>Sign-In</h1>
+            <h1 className="signin-header">Sign-In</h1>
             <input
-              className='signin-field'
+              className="signin-field"
               onChange={handleChange}
               name="email"
               type="email"
@@ -37,7 +39,7 @@ const SignIn = ({ setUser }) => {
           </div>
           <div className="input-wrapper">
             <input
-              className='signin-field'
+              className="signin-field"
               onChange={handleChange}
               type="password"
               name="password"
@@ -46,7 +48,7 @@ const SignIn = ({ setUser }) => {
               required
             />
           </div>
-          <br/>
+          <br />
           <button disabled={!formValues.email || !formValues.password}>
             Sign In
           </button>
@@ -55,5 +57,5 @@ const SignIn = ({ setUser }) => {
     </div>
   )
 }
-
+// Exports
 export default SignIn
