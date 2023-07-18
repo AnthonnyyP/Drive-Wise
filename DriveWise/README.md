@@ -32,11 +32,6 @@ Tony Phan:
 2. [DriveWise (Deployed)]
 
 - Sign-up for an account on our website to start your DriveWise journey!
-- After sign-up, you have full access to our site.
-  - Make Reservations
-  - Leave Reviews
-  - Reservation Overview <br/>
-    \*\*\*Users that do not register will only be able to browse through our inventory.
 
 ---
 
@@ -48,7 +43,9 @@ Welcome to DriveWise, the ultimate destination for your adventurous road trips a
 
 #### **_Future Updates_**:
 
-1. TBD
+1. Car Rental API will be implemented to allow for user access of a much larger & structured database. 
+2. GeoMap will be included on the about page to offer a more realistic feel offering the location of the business.
+3. A payment method/storage component will be added in the future as well to go alongside the booking component. 
 
 ---
 
