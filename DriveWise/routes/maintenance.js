@@ -1,6 +1,6 @@
 // Required Imports
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 
 // Controller
 const maintenanceCtrl = require('../controllers/maintenance')
@@ -10,4 +10,4 @@ router.get('/', maintenanceCtrl.GetAllMaintenanceLog)
 router.get('/listings/:id', maintenanceCtrl.GetSingularMaintenanceLog)
 router.post('/listings/:id', maintenanceCtrl.CreateMaintenanceLog)
 
-module.exports = router;
+module.exports = router

@@ -1,19 +1,20 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema 
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
 const reviewSchema = new Schema(
   {
     review: {
-      type: String, 
-      required: true, 
+      type: String,
+      required: true
     },
     rating: {
-      type: Number, 
+      type: Number,
       min: 1,
-      max: 5, 
-      default: 5, 
-    },
-  }, {
+      max: 5,
+      default: 5
+    }
+  },
+  {
     timestamp: true
   }
 )
