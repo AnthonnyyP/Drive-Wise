@@ -3,13 +3,15 @@ import { MakeReview } from '../services/ReviewsServices'
 
 const ReviewForm = () => {
   const initialState = {
-    rating: '',
+    rating: '1',
     review: '',
   }
   const [formState, setFormState] = useState(initialState)
+
   const handleChange = (e) => {
     setFormState({...formState, [e.target.id]: e.target.value})
   }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     await MakeReview('http://localhost:3001/listings/:id/reviews', formState)

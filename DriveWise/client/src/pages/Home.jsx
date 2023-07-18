@@ -19,7 +19,7 @@ const Home = () => {
 
   return(
     <div className="home-div">
-      <h1>Remember to DriveWise</h1>
+      <h1 className='tagline-header'>Remember to DriveWise</h1>
       <div className="all-listings-div">
       {listings.map((listing) => (
         <Link

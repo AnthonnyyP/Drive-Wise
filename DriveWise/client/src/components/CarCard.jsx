@@ -11,8 +11,8 @@ const CarCard = (props) => {
         <div className="car-card-body">
           <h1>{props.listing.title}</h1>
           <h4>{props.listing.category}</h4>
-          <p>{props.listing.price}</p>
-          <p>{props.listing.detail}</p>
+          <p>${props.listing.price}.00/day</p>
+          <p><strong>{props.listing.detail}</strong></p>
           <p>{props.listing.shortdescription}</p>
         </div>
       </div>
