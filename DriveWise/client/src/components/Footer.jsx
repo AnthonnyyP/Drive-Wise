@@ -1,7 +1,7 @@
 const Footer = () => {
-  return(
+  return (
     <footer>
-      <p>© 2007 DriveWise.  All Rights Reserved.</p>
+      <p>© 2007 DriveWise. All Rights Reserved.</p>
     </footer>
   )
 }

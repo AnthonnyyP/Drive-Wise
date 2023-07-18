@@ -39,21 +39,17 @@ const CarDetails = () => {
       </div>
       <div>
         {details.maintenance?.map((log) => (
-          <Maintenance 
-            log={log}
-          />
+          <Maintenance log={log} />
         ))}
       </div>
       <div>
         <div>
-            <ReviewForm />
+          <ReviewForm />
         </div>
         <div className="reviews-section">
           <h1>Reviews</h1>
           {details.reviews?.map((review) => (
-            <Reviews 
-            review={review}
-            />
+            <Reviews review={review} />
           ))}
         </div>
       </div>
