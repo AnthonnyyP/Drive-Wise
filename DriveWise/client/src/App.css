@@ -46,6 +46,11 @@ a {
   width: 80%;
 }
 
+a:hover{
+  color:black;
+  background-color: white;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -97,7 +102,7 @@ footer p {
   flex-direction: row;
   justify-content: space-evenly;
   text-align: center;
-  margin: 8px 0px;
+  margin: 5% 0px;
 }
 
 .icon-div {
@@ -154,6 +159,10 @@ footer p {
   border-radius: 5px;
   width: 100%;
   justify-content: center;
+}
+
+.carcard-body-div:hover{
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 .car-card-img {
@@ -235,7 +244,7 @@ footer p {
   text-align: center;
   border: 2px solid black;
   width: 60%;
-  margin-bottom: 1%;
+  margin-bottom: 3%;
 }
 .top-items{
   display: flex;
@@ -363,6 +372,11 @@ footer p {
   width: 50%;
   margin: 7% auto;
   padding: 2%;
+}
+
+.FAQ {
+  margin: 3% 10%; 
+  margin-left: 18%;
 }
 
 @media (max-width: 768px) {

@@ -8,16 +8,25 @@ import ReviewForm from '../components/ReviewForm'
 import Maintenance from '../components/MaintenanceLog'
 
 // CarDetails Function
-const CarDetails = () => {
+const CarDetails = (props) => {
   const [details, setDetails] = useState({})
-
+  const [reviews, setReviews] = useState([])
   let { listingId } = useParams()
+  console.log(listingId)
 
   const handleListing = async () => {
     const data = await GetListing(listingId)
     setDetails(data)
   }
-
+  const handleReviewUpdate = (reviewId, updatedReview) => {
+    const reviewIndex = reviews.findIndex((review) => review._id === reviewId);
+    if (reviewIndex !== -1) {
+      const updatedReviews = [...reviews];
+      updatedReviews[reviewIndex].review = updatedReview;
+      setReviews(updatedReviews);
+    }
+  };
+  
   useEffect(() => {
     handleListing()
   }, [listingId])
@@ -56,7 +65,7 @@ const CarDetails = () => {
         <div className="reviews-section">
           <h1>Reviews</h1>
           {details.reviews?.map((review) => (
-            <Reviews review={review} />
+            <Reviews review={review} updateReview={handleReviewUpdate}/>
           ))}
         </div>
       </div>

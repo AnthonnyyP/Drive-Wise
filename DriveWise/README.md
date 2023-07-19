@@ -53,10 +53,15 @@ Welcome to DriveWise, the ultimate destination for your adventurous road trips a
 
 #### Final Product
 
-1. TBD
-
+![Imgur](https://i.imgur.com/3rXorFL.png)
+![Imgur](https://i.imgur.com/T7UIF9b.png)
+![Imgur](https://i.imgur.com/i8KTJhT.png)
 ---
 
 #### **_References_**:
 
-1. TBD
+1. [Github - React Auth](https://github.com/SEI-R-4-24/u4_lesson_react_auth)
+2. [Github - React Forms](https://github.com/SEI-R-4-24/u4_lesson_react_forms)
+3. [Github - Referencing Data](https://github.com/SEI-R-4-24/u2_lesson_mongoose_referencing_related_data)
+
+** Special thanks to all the course IAs and TAs for their help as well! 
