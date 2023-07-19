@@ -1,42 +1,42 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import { UpdateReview, DeleteReview } from '../services/ReviewsServices'
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom'
 
 const Reviews = (props) => {
-  const [isEditing, setIsEditing] = useState(false);
-  const [updatedReview, setUpdatedReview] = useState(props.review.review);
+  const [isEditing, setIsEditing] = useState(false)
+  const [updatedReview, setUpdatedReview] = useState(props.review.review)
 
-  let {listingId} = useParams()
-  console.log(listingId)
+  let { listingId } = useParams()
 
   const handleEdit = () => {
-    setIsEditing(true);
-  };
+    setIsEditing(true)
+  }
 
   const handleUpdate = async () => {
     try {
-      await UpdateReview(props.review._id, {
+      let review = await UpdateReview(props.review._id, {
         review: updatedReview,
-        rating: props.review.rating,
-      });
-      setIsEditing(false);
-      props.updateReview(props.review._id, updatedReview)
+        rating: props.review.rating
+      })
+      props.updateReviews('update', review, props.index)
+      setIsEditing(false)
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  };
+  }
 
   const handleDelete = async () => {
     try {
-      await DeleteReview(props.review._id, props.review.listingId);
+      let review = await DeleteReview(props.review._id, listingId)
+      props.updateReviews('delete', review, props.index)
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  };
+  }
 
   const handleChange = (e) => {
-    setUpdatedReview(e.target.value);
-  };
+    setUpdatedReview(e.target.value)
+  }
 
   return (
     <div className="review-div">
@@ -62,7 +62,7 @@ const Reviews = (props) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews

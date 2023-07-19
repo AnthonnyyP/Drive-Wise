@@ -55,7 +55,7 @@ Welcome to DriveWise, the ultimate destination for your adventurous road trips a
 
 ![Imgur](https://i.imgur.com/3rXorFL.png)
 ![Imgur](https://i.imgur.com/T7UIF9b.png)
-![Imgur](https://i.imgur.com/i8KTJhT.png)
+![Imgur](https://i.imgur.com/ojUZrtf.png)
 ---
 
 #### **_References_**:

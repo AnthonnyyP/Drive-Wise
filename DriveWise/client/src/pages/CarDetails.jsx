@@ -10,23 +10,26 @@ import Maintenance from '../components/MaintenanceLog'
 // CarDetails Function
 const CarDetails = (props) => {
   const [details, setDetails] = useState({})
-  const [reviews, setReviews] = useState([])
+
   let { listingId } = useParams()
-  console.log(listingId)
+ 
 
   const handleListing = async () => {
     const data = await GetListing(listingId)
     setDetails(data)
   }
-  const handleReviewUpdate = (reviewId, updatedReview) => {
-    const reviewIndex = reviews.findIndex((review) => review._id === reviewId);
-    if (reviewIndex !== -1) {
-      const updatedReviews = [...reviews];
-      updatedReviews[reviewIndex].review = updatedReview;
-      setReviews(updatedReviews);
+
+  const updateReviews = (action, newReview, index) => {
+    let reviewsArray = [...details.reviews]
+    if (action === 'update') {
+      console.log(newReview)
+      reviewsArray.splice(index, 1, newReview)
+    } else {
+      reviewsArray.splice(index, 1)
     }
-  };
-  
+    setDetails({...details, reviews: reviewsArray})
+  }
+
   useEffect(() => {
     handleListing()
   }, [listingId])
@@ -48,9 +51,9 @@ const CarDetails = (props) => {
           </div>
         </div>
       </div>
-      <div className='book'>
-        <Link to='/booking'>
-          <button className='bookbutton'>RENT CAR</button>
+      <div className="book">
+        <Link to="/booking">
+          <button className="bookbutton">RENT CAR</button>
         </Link>
       </div>
       <div>
@@ -64,8 +67,12 @@ const CarDetails = (props) => {
         </div>
         <div className="reviews-section">
           <h1>Reviews</h1>
-          {details.reviews?.map((review) => (
-            <Reviews review={review} updateReview={handleReviewUpdate}/>
+          {details.reviews?.map((review, index) => (
+            <Reviews
+              review={review}
+              updateReviews={updateReviews}
+              index={index}
+            />
           ))}
         </div>
       </div>
