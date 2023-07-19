@@ -13,6 +13,7 @@ import SignIn from './pages/SignIn'
 import CarDetails from './pages/CarDetails'
 import ReviewForm from './components/ReviewForm'
 import Booking from './components/Booking'
+import BookingConfirmation from './pages/BookingConfirmation'
 
 // App Function
 const App = () => {
@@ -50,7 +51,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
-          <Route path="/booking" element={<Booking />} />
+          <Route path="/booking" element={<BookingConfirmation />} />
         </Routes>
       </main>
       <Footer />

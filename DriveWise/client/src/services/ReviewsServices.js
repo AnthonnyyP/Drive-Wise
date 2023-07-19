@@ -17,3 +17,21 @@ export const GetReview = async (id, data) => {
     throw error
   }
 }
+
+export const UpdateReview = async (reviewId, data) => {
+  try {
+    const res = await Client.put(`/reviews/${reviewId}`, data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const DeleteReview = async (reviewId, listingId) => {
+  try {
+    const res = await Client.delete(`/reviews/${reviewId}/${listingId}`)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
