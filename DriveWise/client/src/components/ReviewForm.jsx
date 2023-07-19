@@ -5,6 +5,7 @@ import { MakeReview } from '../services/ReviewsServices'
 // Review Form Function
 const ReviewForm = (props) => {
   const initialState = {
+    name: '',
     rating: '1',
     review: ''
   }
@@ -19,6 +20,7 @@ const ReviewForm = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await MakeReview(listingId, {
+      name: formState.name,
       rating: parseInt(formState.rating),
       review: formState.review
     })
@@ -30,6 +32,14 @@ const ReviewForm = (props) => {
     <div className="review-form">
       <h1>Leave a Review</h1>
       <form id="add-review-form" onSubmit={handleSubmit}>
+        <label htmlFor="name">Name:</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          value={formState.name}
+          onChange={handleChange}
+        ></input>
         <label htmlFor="rating">Rating:</label>
         <select
           id="rating"

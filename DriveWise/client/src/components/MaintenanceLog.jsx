@@ -9,7 +9,7 @@ const Maintenance = (props) => {
           <li>Oil Change: {props.log.oilchange}</li>
           <li>Tire Rotation: {props.log.tirerotation}</li>
         </ul>
-        <ul>
+        <ul className="maintenance-ul-2">
           <li>Brakes: {props.log.brakes}</li>
           <li>Wheel Alignment: {props.log.alignment}</li>
           <li>Battery: {props.log.battery}</li>

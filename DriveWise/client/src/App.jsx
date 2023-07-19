@@ -11,6 +11,8 @@ import Contact from './pages/Contact'
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
 import CarDetails from './pages/CarDetails'
+import ReviewForm from './components/ReviewForm'
+import Booking from './components/Booking'
 
 // App Function
 const App = () => {
@@ -39,11 +41,16 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="/home/listings/:listingId" element={<CarDetails />} />
+          <Route
+            path="/home/listings/:listingId"
+            element={<CarDetails />}
+            form={<ReviewForm />}
+          />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
+          <Route path="/booking" element={<Booking />} />
         </Routes>
       </main>
       <Footer />

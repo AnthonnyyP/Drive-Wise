@@ -1,7 +1,8 @@
 // Imports
 import { GetListing } from '../services/DetailService'
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
+
 import Reviews from '../components/Reviews'
 import ReviewForm from '../components/ReviewForm'
 import Maintenance from '../components/MaintenanceLog'
@@ -37,6 +38,11 @@ const CarDetails = () => {
             <p>{details.longdescription}</p>
           </div>
         </div>
+      </div>
+      <div className='book'>
+        <Link to='/booking'>
+          <button className='bookbutton'>RENT CAR</button>
+        </Link>
       </div>
       <div>
         {details.maintenance?.map((log) => (

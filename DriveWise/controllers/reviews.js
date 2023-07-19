@@ -3,8 +3,9 @@ const Listing = require('../models/Listing');
 
 
 const createReview = async (req, res) => {
-  let { review, rating } = req.body;
+  let { name, review, rating } = req.body;
   const newReview = {
+    name: name, 
     review: review,
     rating: rating,
   } 
