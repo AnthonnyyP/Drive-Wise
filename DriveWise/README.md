@@ -6,7 +6,7 @@
 
 ---
 
-Tony Phan:
+Anthony Phan:
 [Github](https://github.com/ant087) |
 [LinkedIn](https://www.linkedin.com/in/ap777/)
 
